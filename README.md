@@ -191,7 +191,7 @@
         ```javscript
         let arrStory=[given,when1,when2,then];
 
-        console.log("control-flow: for")
+        console.log("control-flow: if-else")
         for (let index = 0; index < arrStory.length; index++) {
             const strStory = arrStory[index];
             const key=strStory.substr(0,strStory.indexOf(":"));
@@ -202,8 +202,6 @@
             }else{
                 console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
             }
-
-            // console.log(strStory);
         }
         ```
         ```bash
@@ -221,19 +219,22 @@
         ```javscript
         let arrStory=[given,when1,when2,then];
 
-        console.log("control-flow: for")
+        console.log("control-flow: switch")
         for (let index = 0; index < arrStory.length; index++) {
             const strStory = arrStory[index];
             const key=strStory.substr(0,strStory.indexOf(":"));
-            if(key ==="Given"){
-                console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
-            }else if(key === "When"){
-                console.log(`It's a when: ${strStory.substr(strStory.indexOf(":")+1)}`);
-            }else{
-                console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
+            switch (key) {
+                case "Given":
+                    console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
+                    break;
+                case "When":
+                    console.log(`It's a when: ${strStory.substr(strStory.indexOf(":")+1)}`);
+                    break;
+                case "Then":
+                default:
+                    console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
+                    break;
             }
-
-            // console.log(strStory);
         }
         ```
         ```bash
@@ -242,4 +243,72 @@
         ```bash
         # commit
         git add . && git commit -m "complete if-else"
+        ```
+    1. Best Practice - **if**
+        ```bash
+        git checkout if
+        git checkout -b best-practice-if
+        ```
+        ```javascript
+        // best practice
+        console.log("best practice - if")
+        for (let index = 0; index < arrStory.length; index++) {
+            const strStory = arrStory[index];
+            const key=strStory.substr(0,strStory.indexOf(":"));
+            if(key ==="Given")  console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
+            if(key === "When")  console.log(`It's a when: ${strStory.substr(strStory.indexOf(":")+1)}`);
+            if(key === "Then")  console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
+        }
+        ```
+        ```bash
+        # run code & commit code
+        ```
+    1. **function**
+        ```bash
+        git checkout switch
+        git checkout -b function
+        ```
+        ```javascript
+        console.log("control-flow: function")
+        for (let index = 0; index < arrStory.length; index++) {
+            const strStory = arrStory[index];
+            const key=strStory.substr(0,strStory.indexOf(":"));
+            const message=strStory.substr(strStory.indexOf(":")+1);
+            switch (key) {
+                case "Given":
+                    Given(message);
+                    break;
+                case "When":
+                    When(message);
+                    break;
+                case "Then":
+                    Then(message);
+                    break;
+                default:
+                    event(key,message);
+                    break;
+            }
+        }
+
+        function Given(message) {
+            // console.log(`It's a given: ${message}`);
+            event("given",message);
+        }
+
+        function When(message){
+            // console.log(`It's a when: ${message}`);
+            event("when",message);
+        }
+
+        function Then(message){
+            // console.log(`It's a then: ${message}`);
+            event("then",message);
+        }
+
+        function event(event,message){
+            console.log(`It's a ${event}: ${message}`);
+        }
+        ```
+        ```bash
+        # run and commit
         ```
