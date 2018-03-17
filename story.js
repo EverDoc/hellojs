@@ -21,3 +21,13 @@ for (let index = 0; index < arrStory.length; index++) {
         console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
     }
 }
+
+// best practice 
+console.log("best practice - if")
+for (let index = 0; index < arrStory.length; index++) {
+    const strStory = arrStory[index];
+    const key=strStory.substr(0,strStory.indexOf(":"));
+    if(key ==="Given")  console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
+    if(key === "When")  console.log(`It's a when: ${strStory.substr(strStory.indexOf(":")+1)}`);
+    if(key === "Then")  console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
+}
