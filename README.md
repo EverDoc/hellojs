@@ -113,3 +113,46 @@
         !peter.employed
         mary.name !== peter.name
         ```
+1. ### Story in javascript
+
+    Rebbit Mom asks rebbit baby open the door. Create story.js, it's an old story, Rabbit Mom Ask baby open the door
+    ```javascript
+    // The Rabbit Mom stands in the front of the door
+    // Asks the baby "Open the door"
+    // And say "I am Mom"
+    // The rabbit baby opens the door
+    let given="Given: stand in the front of the door";
+    let when1="When: ask Open the door";
+    let when2="When: I am Mom";
+    let then = "Then: open the door";
+    ```
+    1. **for, while**
+        ```javascript
+        let arrStory=[given,when1,when2,then];
+
+        console.log("control-flow: for")
+        for (let index = 0; index < arrStory.length; index++) {
+            const strStory = arrStory[index];
+            console.log(strStory);
+        }
+
+        console.log("control-flow: while");
+        let flag=0;
+        while (flag<arrStory.length) {
+            const strStory=arrStory[flag];
+            flag++;
+            console.log(strStory);
+        }
+
+        ```
+    1. Run in node
+        ```bash
+        node story.js
+        ```
+    1. Debug in VS code
+        1. Add config
+        1. Debug
+        1. See output
+    1. **if, else**
+        ```javscript
+        ```
