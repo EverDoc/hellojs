@@ -131,7 +131,7 @@
         # commit
         git add . && git commit -m "initial story"
         ```
-    1. **for**
+    1. How to outline the story completely - **for**
         ```bash
         # new branch for
         git branch for
@@ -140,7 +140,7 @@
         git checkout -b for
         ```
         ```javascript
-        let arrStory=[given,when1,when2,then];
+        let arrStory = [given,when1,when2,then];
 
         console.log("control-flow: for")
         for (let index = 0; index < arrStory.length; index++) {
@@ -149,20 +149,46 @@
         }
         ```
         ```bash
+        # run the code in command
+        node story.js
+        ```
+        ```bash
         # commit
         git add . && git commit -m "complete for"
         ```
-    1. Run in node
+    1. How to outline the story completely - **while**
         ```bash
-        node story.js
+        # switch to the master to clean up code
+        git checkout master
+        # create new branch for while
+        git checkout -b while
         ```
-    1. Debug in VS code
-        1. Add config
-        1. Debug
-        1. See output
-    1. **if, else**
-
         ```javascript
+        let arrStory=[given,when1,when2,then];
+
+        console.log("control-flow: while")
+        for (let index = 0; index < arrStory.length; index++) {
+            const strStory = arrStory[index];
+            console.log(strStory);
+        }
+        ```
+        ```bash
+        # Debug in node
+        # 1. Add configuration
+        # 2. Launch in debug mode
+        # 3. See the output
+        ```
+        ```bash
+        # commit
+        git add . && git commit -m "complete while"
+        ```
+    1. **if, else**
+        ```bash
+        # base on the for branch
+        git checkout for
+        git checkout -b if-else
+        ```
+        ```javscript
         let arrStory=[given,when1,when2,then];
 
         console.log("control-flow: for")
@@ -176,4 +202,14 @@
             }else{
                 console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
             }
+
+            // console.log(strStory);
+        }
+        ```
+        ```bash
+        # run code
+        ```
+        ```bash
+        # commit
+        git add . && git commit -m "complete if-else"
         ```

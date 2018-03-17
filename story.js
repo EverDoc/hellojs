@@ -9,8 +9,15 @@ let then = "Then: open the door";
 
 let arrStory=[given,when1,when2,then];
 
-console.log("control-flow: for")
+console.log("control-flow: if")
 for (let index = 0; index < arrStory.length; index++) {
     const strStory = arrStory[index];
-    console.log(strStory);
+    const key=strStory.substr(0,strStory.indexOf(":"));
+    if(key ==="Given"){
+        console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
+    }else if(key === "When"){
+        console.log(`It's a when: ${strStory.substr(strStory.indexOf(":")+1)}`);
+    }else{
+        console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
+    }
 }
