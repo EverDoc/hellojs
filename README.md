@@ -115,18 +115,30 @@
         ```
 1. ### Story in javascript
 
-    Rebbit Mom asks rebbit baby open the door. Create story.js, it's an old story, Rabbit Mom Ask baby open the door
-    ```javascript
-    // The Rabbit Mom stands in the front of the door
-    // Asks the baby "Open the door"
-    // And say "I am Mom"
-    // The rabbit baby opens the door
-    let given="Given: stand in the front of the door";
-    let when1="When: ask Open the door";
-    let when2="When: I am Mom";
-    let then = "Then: open the door";
-    ```
-    1. **for, while**
+    Rebbit Mom asks rebbit baby open the door.
+    1. Create story.js, it's an old story, Rabbit Mom Ask baby open the door
+        ```javascript
+        // The Rabbit Mom stands in the front of the door
+        // Asks the baby "Open the door"
+        // And say "I am Mom"
+        // The rabbit baby opens the door
+        let given="Given: stand in the front of the door";
+        let when1="When: ask Open the door";
+        let when2="When: I am Mom";
+        let then = "Then: open the door";
+        ```
+        ```bash
+        # commit
+        git add . && git commit -m "initial story"
+        ```
+    1. **for**
+        ```bash
+        # new branch for
+        git branch for
+        git checkout for
+        # or quick command
+        git checkout -b for
+        ```
         ```javascript
         let arrStory=[given,when1,when2,then];
 
@@ -135,15 +147,10 @@
             const strStory = arrStory[index];
             console.log(strStory);
         }
-
-        console.log("control-flow: while");
-        let flag=0;
-        while (flag<arrStory.length) {
-            const strStory=arrStory[flag];
-            flag++;
-            console.log(strStory);
-        }
-
+        ```
+        ```bash
+        # commit
+        git add . && git commit -m "complete for"
         ```
     1. Run in node
         ```bash
@@ -154,5 +161,19 @@
         1. Debug
         1. See output
     1. **if, else**
-        ```javscript
+
+        ```javascript
+        let arrStory=[given,when1,when2,then];
+
+        console.log("control-flow: for")
+        for (let index = 0; index < arrStory.length; index++) {
+            const strStory = arrStory[index];
+            const key=strStory.substr(0,strStory.indexOf(":"));
+            if(key ==="Given"){
+                console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
+            }else if(key === "When"){
+                console.log(`It's a when: ${strStory.substr(strStory.indexOf(":")+1)}`);
+            }else{
+                console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
+            }
         ```
