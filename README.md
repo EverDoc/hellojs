@@ -243,34 +243,3 @@
         # commit
         git add . && git commit -m "complete if-else"
         ```
-    1. Base Practice - **if**
-        ```bash
-        # base on the for branch
-        git checkout for
-        git checkout -b if-else
-        ```
-        ```javscript
-        let arrStory=[given,when1,when2,then];
-
-        console.log("control-flow: for")
-        for (let index = 0; index < arrStory.length; index++) {
-            const strStory = arrStory[index];
-            const key=strStory.substr(0,strStory.indexOf(":"));
-            if(key ==="Given"){
-                console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
-            }else if(key === "When"){
-                console.log(`It's a when: ${strStory.substr(strStory.indexOf(":")+1)}`);
-            }else{
-                console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
-            }
-
-            // console.log(strStory);
-        }
-        ```
-        ```bash
-        # run code
-        ```
-        ```bash
-        # commit
-        git add . && git commit -m "complete if-else"
-        ```
