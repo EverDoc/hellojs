@@ -523,6 +523,12 @@
             ```bash
             # run and commit
             ```
+    1. DONE
+        ```bash
+        git checkout master
+        git merge webdriver
+        git push
+        ```
 
 [api]: http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/
 [chrome]: http://chromedriver.storage.googleapis.com/index.html
