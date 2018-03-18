@@ -10,13 +10,13 @@
 
 ## Pre-requesite
 
-- Nodejs
-- Git
-- Visual Studio Code
+- Nodejs [Download]([nodejs])
+- Git [Download]([git])
+- Visual Studio Code [Download]([vscode])
 
 ## Presentation
 
-1. ### Create project folder `helljs`
+1. ### Create project folder `hellojs`
 
 1. ### Init a git repository
 
@@ -61,11 +61,11 @@
         | Number  | 数字，一个数字。不用引号包围。                                                             |
         | Boolean | 布尔型，一个 True/False （真 / 假）值。 true/false 是 JS 里的特殊关键字，不需要引号。      |
         | Array   | 数组，一种允许你存储多个值在一个引用里的结构。                                             |
-        | Object  | 对象，基本上 JavaScript 里的任何东西都是对象，而且都可以被储存在变量里。将这个记在脑子里。 |
+        | Object  | 对象，基本上 JavaScript 里的任何东西都是对象，而且都可以被储存在变量里。 |
 
         ```javascript
         // String
-        let name = 'bob';
+        let name = 'Peter';
 
         // Number
         let age = 30;
@@ -77,7 +77,7 @@
         let location = [11,4,1] // position #1 row #4 build #11
 
         // Object
-        let people = {name:name, age:age, employed=employed, location:location};
+        let peter = {name:name, age:age, employed=employed, location:location};
         ```
     1. Operator
 
@@ -539,3 +539,6 @@
 [geckodriver]: https://github.com/mozilla/geckodriver/releases/
 [release]: http://selenium-release.storage.googleapis.com/index.html
 [safaridriver]: https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_0.html#//apple_ref/doc/uid/TP40014305-CH11-DontLinkElementID_28
+[vscode]:https://code.visualstudio.com/
+[git]:https://git-scm.com/
+[nodejs]:http://nodejs.cn/
