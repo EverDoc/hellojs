@@ -1,4 +1,4 @@
-import Story from  "./story.mjs";
+import MyStory from "./my_story.mjs";
 
 // The Rabbit Mom stands in the front of the door
 // Asks the baby "Open the door"
@@ -10,5 +10,5 @@ let when2="When: say I am Mom";
 let then = "Then: open the door";
 
 let arrStory=[given,when1,when2,then];
-let objStory=new Story(arrStory);
+let objStory=new MyStory(arrStory);
 objStory.Play();

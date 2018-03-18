@@ -407,3 +407,46 @@
         ```bash
         # run and commit
         ```
+    1. **extens, super**
+        ```bash
+        git checkout -b class-extens
+        ```
+        ```javascript
+        // my_story.mjs
+        import Story from "./story.mjs";
+
+        export default class MyStory extends Story{
+
+            Given(context){
+                super.Given(context);
+            }
+
+            When(context){
+                super.When(context);
+                if(context===" ask Open the door")  this.event("question","Who are you?");
+                if(context===" say I am Mom")       this.event("question","Mom is back!");
+            }
+
+            Then(context){
+                super.Then(context);
+            }
+        }
+        // open_door.mjs
+        import MyStory from "./my_story.mjs";
+
+        // The Rabbit Mom stands in the front of the door
+        // Asks the baby "Open the door"
+        // And say "I am Mom"
+        // The rabbit baby opens the door
+        let given="Given: stand in the front of the door";
+        let when1="When: ask Open the door";
+        let when2="When: say I am Mom";
+        let then = "Then: open the door";
+
+        let arrStory=[given,when1,when2,then];
+        let objStory=new MyStory(arrStory);
+        objStory.Play();
+        ```
+        ```bash
+        # run and commit
+        ```
