@@ -312,3 +312,98 @@
         ```bash
         # run and commit
         ```
+        ```bash
+        git checkout -b class
+        ```
+    1. **class**
+        ```bash
+        git checkout -b class
+        ```
+        ```javascript
+        // story.mjs
+        export default class Story{
+            constructor(content){
+                this.content=content;
+            }
+
+            Given(context) {
+                // console.log(`It's a given: ${message}`);
+                this.event("given",context);
+            }
+
+            When(context){
+                // console.log(`It's a when: ${message}`);
+                this.event("when",context);
+            }
+
+            Then(context){
+                // console.log(`It's a then: ${message}`);
+                this.event("then",context);
+            }
+
+            event(event,context){
+                console.log(`It's a ${event}: ${context}`);
+            }
+
+            Play(){
+                console.log(this.content);
+                for (let index = 0; index < this.content.length; index++) {
+                    const strContent = this.content[index];
+                    const key=strContent.substr(0,strContent.indexOf(":"));
+                    const message=strContent.substr(strContent.indexOf(":")+1);
+                    switch (key) {
+                        case "Given":
+                            this.Given(message);
+                            break;
+                        case "When":
+                            this.When(message);
+                            break;
+                        case "Then":
+                            this.Then(message);
+                            break;
+                        default:
+                            this.event(key,message);
+                            break;
+                    }
+                }
+            }
+        }
+        // open_door.mjs
+        import Story from  "./story.mjs";
+
+        // The Rabbit Mom stands in the front of the door
+        // Asks the baby "Open the door"
+        // And say "I am Mom"
+        // The rabbit baby opens the door
+        let given="Given: stand in the front of the door";
+        let when1="When: ask Open the door";
+        let when2="When: say I am Mom";
+        let then = "Then: open the door";
+
+        let arrStory=[given,when1,when2,then];
+        let objStory=new Story(arrStory);
+        objStory.Play();
+        ```
+        ```json
+        // launch.json
+        {
+            // Use IntelliSense to learn about possible attributes.
+            // Hover to view descriptions of existing attributes.
+            // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+            "version": "0.2.0",
+            "configurations": [
+                {
+                    "type": "node",
+                    "request": "launch",
+                    "name": "Launch Program",
+                    "program": "${workspaceFolder}/open_door.mjs",
+                    "runtimeArgs": [
+                        "--experimental-modules"
+                    ]
+                }
+            ]
+        }
+        ```
+        ```bash
+        # run and commit
+        ```
