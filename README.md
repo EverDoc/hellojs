@@ -450,3 +450,31 @@
         ```bash
         # run and commit
         ```
+    1. regular expression
+        ```bash
+        git checkout -b reg-exp
+        ```
+        ```javascript
+        // my_story.mjs
+        import Story from "./story.mjs";
+
+        export default class MyStory extends Story{
+
+            Given(context){
+                super.Given(context);
+            }
+
+            When(context){
+                super.When(context);
+                if(/ask Open the door/i.test(context))  this.event("question","Who are you?");
+                if(/say\sI\sam\sMom/i.test(context))       this.event("question","Mom is back!");
+            }
+
+            Then(context){
+                super.Then(context);
+            }
+        }
+        ```
+        ```bash
+        # run and commit
+        ```

@@ -8,8 +8,8 @@ export default class MyStory extends Story{
     
     When(context){
         super.When(context);
-        if(context===" ask Open the door")  this.event("question","Who are you?");
-        if(context===" say I am Mom")       this.event("question","Mom is back!");
+        if(/ask Open the door/i.test(context))  this.event("question","Who are you?");
+        if(/say\sI\sam\sMom/i.test(context))       this.event("question","Mom is back!");
     }
 
     Then(context){
