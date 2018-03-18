@@ -478,3 +478,56 @@
         ```bash
         # run and commit
         ```
+    1. WebDriver
+
+        [Selenium](https://docs.seleniumhq.org/projects/webdriver/) is a browser automation library. Most often used for testing web-applications, Selenium may be used for any task that equires automating interaction with the browser.
+
+        1. install selenium-webdriver
+            ```node
+            npm install selenium-webdriver
+            ```
+        1. download chrom driver
+            Download the driver to local repository like C:\drivers, and add the local repository to the environment variable `PATH`
+            | Browser           | Component                          |
+            | ----------------- | ---------------------------------- |
+            | Chrome            | [chromedriver(.exe)][chrome]       |
+            | Internet Explorer | [IEDriverServer.exe][release]      |
+            | Edge              | [MicrosoftWebDriver.msi][edge]     |
+            | Firefox           | [geckodriver(.exe)][geckodriver]   |
+            | Safari            | [safaridriver]                     |
+        1. coding
+            ```bash
+            git checkout -b webdriver
+            ```
+            ```javascript
+            // my_story.mjs
+            Then(context){
+                super.Then(context);
+                let driver= new webdriver.Builder().forBrowser("chrome").build();
+                const msg_url='https://raw.githubusercontent.com/EverDoc/hellojs/webdriver/mom.txt';
+                driver.get(msg_url);
+                driver.wait(webdriver.until.urlIs(msg_url), 1000*10)
+                .then((success)=>{
+                    driver.findElement(webdriver.By.tagName('pre')).getText().then((message)=>{
+                            driver.quit();
+                            console.log(message);       
+                        }
+                    );
+                    },(reason)=>{
+                        // do nothing
+                        console.log(reason);
+                        driver.quit();
+                });
+            }
+            ```
+            ```bash
+            # run and commit
+            ```
+
+[api]: http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/
+[chrome]: http://chromedriver.storage.googleapis.com/index.html
+[gh]: https://github.com/SeleniumHQ/selenium/
+[edge]: http://go.microsoft.com/fwlink/?LinkId=619687
+[geckodriver]: https://github.com/mozilla/geckodriver/releases/
+[release]: http://selenium-release.storage.googleapis.com/index.html
+[safaridriver]: https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_0.html#//apple_ref/doc/uid/TP40014305-CH11-DontLinkElementID_28
