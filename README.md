@@ -242,7 +242,7 @@
         ```
         ```bash
         # commit
-        git add . && git commit -m "complete if-else"
+        git add . && git commit -m "complete switch"
         ```
     1. Best Practice - **if**
         ```bash
@@ -255,9 +255,10 @@
         for (let index = 0; index < arrStory.length; index++) {
             const strStory = arrStory[index];
             const key=strStory.substr(0,strStory.indexOf(":"));
-            if(key ==="Given")  console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
-            if(key === "When")  console.log(`It's a when: ${strStory.substr(strStory.indexOf(":")+1)}`);
-            if(key === "Then")  console.log(`It's a ${key}: ${strStory.substr(strStory.indexOf(":")+1)}`);
+            const content=strStory.substr(strStory.indexOf(":")+1);
+            if(key ==="Given")  console.log(`It's a given: ${content}`);
+            if(key === "When")  console.log(`It's a when: ${content}`);
+            if(key === "Then")  console.log(`It's a ${key}: ${content}`);
         }
         ```
         ```bash
@@ -269,7 +270,6 @@
         git checkout -b function
         ```
         ```javascript
-        console.log("control-flow: function")
         for (let index = 0; index < arrStory.length; index++) {
             const strStory = arrStory[index];
             const key=strStory.substr(0,strStory.indexOf(":"));
@@ -488,6 +488,7 @@
             ```
         1. download chrom driver
             Download the driver to local repository like C:\drivers, and add the local repository to the environment variable `PATH`
+
             | Browser           | Component                          |
             | ----------------- | ---------------------------------- |
             | Chrome            | [chromedriver(.exe)][chrome]       |
@@ -495,6 +496,7 @@
             | Edge              | [MicrosoftWebDriver.msi][edge]     |
             | Firefox           | [geckodriver(.exe)][geckodriver]   |
             | Safari            | [safaridriver]                     |
+
         1. coding
             ```bash
             git checkout -b webdriver
