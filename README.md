@@ -167,8 +167,10 @@
         let arrStory=[given,when1,when2,then];
 
         console.log("control-flow: while")
-        for (let index = 0; index < arrStory.length; index++) {
-            const strStory = arrStory[index];
+        let flag=0;
+        while(flag<arrStory.length){
+            const strStory = arrStory[flag];
+            flag++;
             console.log(strStory);
         }
         ```
