@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "--experimantal-modules open_door.mjs"
+    "test": "--experimental-modules open_door.mjs"
   },
   "repository": {
     "type": "git",
