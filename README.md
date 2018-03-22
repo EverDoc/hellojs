@@ -10,9 +10,9 @@
 
 ## Pre-requesite
 
-- Nodejs [Download]([nodejs])
-- Git [Download]([git])
-- Visual Studio Code [Download]([vscode])
+- Nodejs [Download][nodejs]
+- Git [Download][git]
+- Visual Studio Code [Download][vscode]
 
 ## Presentation
 
@@ -190,7 +190,7 @@
         git checkout for
         git checkout -b if-else
         ```
-        ```javscript
+        ```javascript
         let arrStory=[given,when1,when2,then];
 
         console.log("control-flow: if-else")
@@ -218,7 +218,7 @@
         # base on the if-else branch
         git checkout -b switch
         ```
-        ```javscript
+        ```javascript
         let arrStory=[given,when1,when2,then];
 
         console.log("control-flow: switch")
@@ -253,6 +253,7 @@
         ```
         ```javascript
         // best practice
+
         console.log("best practice - if")
         for (let index = 0; index < arrStory.length; index++) {
             const strStory = arrStory[index];
@@ -314,9 +315,6 @@
         ```bash
         # run and commit
         ```
-        ```bash
-        git checkout -b class
-        ```
     1. **class**
         ```bash
         git checkout -b class
@@ -335,7 +333,7 @@
 
             When(context){
                 // console.log(`It's a when: ${message}`);
-                this.event("when",context);
+               this.event("when",context);
             }
 
             Then(context){
@@ -370,13 +368,16 @@
                 }
             }
         }
+
         // open_door.mjs
+
         import Story from  "./story.mjs";
 
         // The Rabbit Mom stands in the front of the door
         // Asks the baby "Open the door"
         // And say "I am Mom"
         // The rabbit baby opens the door
+
         let given="Given: stand in the front of the door";
         let when1="When: ask Open the door";
         let when2="When: say I am Mom";
@@ -387,11 +388,14 @@
         objStory.Play();
         ```
         ```json
+
         // launch.json
+
         {
             // Use IntelliSense to learn about possible attributes.
             // Hover to view descriptions of existing attributes.
             // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
             "version": "0.2.0",
             "configurations": [
                 {
@@ -414,7 +418,9 @@
         git checkout -b class-extens
         ```
         ```javascript
+
         // my_story.mjs
+
         import Story from "./story.mjs";
 
         export default class MyStory extends Story{
@@ -433,13 +439,16 @@
                 super.Then(context);
             }
         }
+
         // open_door.mjs
+
         import MyStory from "./my_story.mjs";
 
         // The Rabbit Mom stands in the front of the door
         // Asks the baby "Open the door"
         // And say "I am Mom"
         // The rabbit baby opens the door
+
         let given="Given: stand in the front of the door";
         let when1="When: ask Open the door";
         let when2="When: say I am Mom";
@@ -458,6 +467,7 @@
         ```
         ```javascript
         // my_story.mjs
+
         import Story from "./story.mjs";
 
         export default class MyStory extends Story{
@@ -505,6 +515,7 @@
             ```
             ```javascript
             // my_story.mjs
+
             Then(context){
                 super.Then(context);
                 let driver= new webdriver.Builder().forBrowser("chrome").build();
@@ -514,7 +525,7 @@
                 .then((success)=>{
                     driver.findElement(webdriver.By.tagName('pre')).getText().then((message)=>{
                             driver.quit();
-                            console.log(message);       
+                            console.log(message);
                         }
                     );
                     },(reason)=>{
