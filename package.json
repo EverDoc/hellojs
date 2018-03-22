@@ -1,0 +1,28 @@
+{
+  "name": "hellojs",
+  "version": "1.0.0",
+  "description": "javascript tutorial for QA",
+  "main": "open_door.mjs",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "--experimantal-modules open_door.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EverDoc/hellojs.git"
+  },
+  "keywords": [
+    "javascript",
+    "git",
+    "node"
+  ],
+  "author": "baikangwang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EverDoc/hellojs/issues"
+  },
+  "homepage": "https://github.com/EverDoc/hellojs#readme"
+}
