@@ -126,6 +126,9 @@
         let when1="When: ask Open the door";
         let when2="When: I am Mom";
         let then = "Then: open the door";
+
+        let arrStory = [given,when1,when2,then];
+        console.log(arrStory);
         ```
         ```bash
         # commit
@@ -140,8 +143,6 @@
         git checkout -b for
         ```
         ```javascript
-        let arrStory = [given,when1,when2,then];
-
         console.log("control-flow: for")
         for (let index = 0; index < arrStory.length; index++) {
             const strStory = arrStory[index];
@@ -149,8 +150,10 @@
         }
         ```
         ```bash
-        # run the code in command
-        node story.js
+        # Debug in node
+        # 1. Add configuration
+        # 2. Launch in debug mode
+        # 3. See the output
         ```
         ```bash
         # commit
@@ -164,8 +167,6 @@
         git checkout -b while
         ```
         ```javascript
-        let arrStory=[given,when1,when2,then];
-
         console.log("control-flow: while")
         let flag=0;
         while(flag<arrStory.length){
@@ -175,10 +176,8 @@
         }
         ```
         ```bash
-        # Debug in node
-        # 1. Add configuration
-        # 2. Launch in debug mode
-        # 3. See the output
+        # run the code in command
+        node story.js
         ```
         ```bash
         # commit
@@ -191,11 +190,11 @@
         git checkout -b if-else
         ```
         ```javascript
-        let arrStory=[given,when1,when2,then];
-
         console.log("control-flow: if-else")
         for (let index = 0; index < arrStory.length; index++) {
             const strStory = arrStory[index];
+            // subStr: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substr
+            // indexOf: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
             const key=strStory.substr(0,strStory.indexOf(":"));
             if(key ==="Given"){
                 console.log(`It's a given: ${strStory.substr(strStory.indexOf(":")+1)}`);
@@ -219,8 +218,6 @@
         git checkout -b switch
         ```
         ```javascript
-        let arrStory=[given,when1,when2,then];
-
         console.log("control-flow: switch")
         for (let index = 0; index < arrStory.length; index++) {
             const strStory = arrStory[index];
@@ -478,6 +475,7 @@
 
             When(context){
                 super.When(context);
+                // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions
                 if(/ask Open the door/i.test(context))  this.event("question","Who are you?");
                 if(/say\sI\sam\sMom/i.test(context))       this.event("question","Mom is back!");
             }
