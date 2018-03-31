@@ -29,34 +29,34 @@
 
 ## Details
 
-|       Name       | Base | Standard | Extra | Total |      Comments       |
-| ---------------- | ---- | -------- | ------ | ----- | ------------------- |
-| Chen, Juan       | 9    | 16       | 2      | 27    | [View](chenjuan)    |
-| Liu, Qian        | 9    | 16       | 2      | 27    | [View](liuqian)     |
-| Liu, Zhi Chen    | 9    | 16       | 2      | 27    | [View](liuzhichen)  |
-| Wei, Wei         | 9    | 16       | 2      | 27    | [View](weiwei)      |
-| Zhao, Lei        | 9    | 16       | 2      | 27    | [View](zhaolei)     |
-| Peng, Yu         | 9    | 16       | 1      | 26    | [View](pengyu)      |
-| Wang, Qi         | 9    | 16       | 1      | 26    |                     |
-| Yang, Xue        | 9    | 16       | 1      | 26    | [View](yangxue)     |
-| Miao, Jin Jin    | 9    | 16       | 0      | 25    |                     |
-| Wang, Xiao Chen  | 9    | 16       | 0      | 25    |                     |
-| Xu, Hong Wang    | 9    | 16       | 0      | 25    |                     |
-| Zhang, Ying      | 9    | 16       | 1      | 25    |                     |
-| Zhao, Ya Jun     | 9    | 16       | 0      | 25    |                     |
-| Gao, Rong Min    | 9    | 15       | 0      | 24    | [View](gaorongmin)  |
-| Gu, Pin Jing     | 9    | 15       | 0      | 24    | [View](gupinjing)   |
-| Chang, Jun Jie   | 9    | 13       | 0      | 22    |                     |
-| Zhang, Jiong Dai | 9    | 13       | 0      | 22    | [View](zhangjundai) |
-| Zhang, Chun Yu   | 9    | 11       | 0      | 20    |                     |
-| Zhao, Na         | 9    | 10       | 1      | 20    | [View](zhaona)      |
-| Zhang, Ya Bing   | 9    | 10       | 1      | 19    | [View](zhangyabing) |
-| Cao, Yan Bo      | 9    | 1        | 0      | 10    |                     |
-| Liu, Xiang Nan   | 9    | 1        | 0      | 10    |                     |
-| Wang, Aimee      | 9    | 1        | 0      | 10    | submit wrongly      |
-| Wang, Lan Fang   | 9    | 1        | 0      | 10    |                     |
-| Chai, Shan       | 9    | 0        | 0      | 9     | need to encrypt zip |
-| Wu, Nina         | 9    | 0        | 0      | 9     |                     |
+|       Name       | Base | Standard | Extra | Total |       Comments        |
+| ---------------- | ---- | -------- | ----- | ----- | --------------------- |
+| Chen, Juan       | 9    | 16       | 2     | 27    | [View](chenjuan)      |
+| Liu, Qian        | 9    | 16       | 2     | 27    | [View](liuqian)       |
+| Liu, Zhi Chen    | 9    | 16       | 2     | 27    | [View](liuzhichen)    |
+| Wei, Wei         | 9    | 16       | 2     | 27    | [View](weiwei)        |
+| Zhao, Lei        | 9    | 16       | 2     | 27    | [View](zhaolei)       |
+| Peng, Yu         | 9    | 16       | 1     | 26    | [View](pengyu)        |
+| Wang, Qi         | 9    | 16       | 1     | 26    |                       |
+| Yang, Xue        | 9    | 16       | 1     | 26    | [View](yangxue)       |
+| Miao, Jin Jin    | 9    | 16       | 0     | 25    |                       |
+| Wang, Xiao Chen  | 9    | 16       | 0     | 25    |                       |
+| Xu, Hong Wang    | 9    | 16       | 0     | 25    |                       |
+| Zhang, Ying      | 9    | 16       | 1     | 25    |                       |
+| Zhao, Ya Jun     | 9    | 16       | 0     | 25    |                       |
+| Gao, Rong Min    | 9    | 15       | 0     | 24    | [View](gaorongmin)    |
+| Gu, Pin Jing     | 9    | 15       | 0     | 24    | [View](gupinjing)     |
+| Chang, Jun Jie   | 9    | 13       | 0     | 22    |                       |
+| Zhang, Jiong Dai | 9    | 13       | 0     | 22    | [View](zhangjiongdai) |
+| Zhang, Chun Yu   | 9    | 11       | 0     | 20    |                       |
+| Zhao, Na         | 9    | 10       | 1     | 20    | [View](zhaona)        |
+| Zhang, Ya Bing   | 9    | 10       | 1     | 19    | [View](zhangyabing)   |
+| Cao, Yan Bo      | 9    | 1        | 0     | 10    |                       |
+| Liu, Xiang Nan   | 9    | 1        | 0     | 10    |                       |
+| Wang, Aimee      | 9    | 1        | 0     | 10    | submit wrongly        |
+| Wang, Lan Fang   | 9    | 1        | 0     | 10    |                       |
+| Chai, Shan       | 9    | 0        | 0     | 9     | need to encrypt zip   |
+| Wu, Nina         | 9    | 0        | 0     | 9     |                       |
 
 ## Attachment
 
