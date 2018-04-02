@@ -31,7 +31,7 @@
 
 |         Name          | Base | Standard | Extra | Total |                                 Comments                                 |
 | --------------------- | ---- | -------- | ----- | ----- | ------------------------------------------------------------------------ |
-| Zhang, Wei Ming       | 9    | 17       | 2     | 28    | Standard Cucumber Pattern [View](https://github.com/liehuojdd/userlogin) |
+| Zhang, Wei Ming       | 9    | 17       | 2     | 28    | [Standard Cucumber Pattern](https://github.com/liehuojdd/userlogin) |
 | Chen, Juan            | 9    | 16       | 2     | 27    | [View](chenjuan)                                                         |
 | Liu, Qian             | 9    | 16       | 2     | 27    | [View](liuqian)                                                          |
 | Liu, Zhi Chen         | 9    | 16       | 2     | 27    | [View](liuzhichen)                                                       |
